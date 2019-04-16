@@ -15,9 +15,10 @@ public class Main {
 
         System.out.println("Type the day of the month you were born on.");
         Integer day = scan.nextInt();
-        System.out.println(dayOfTheWeek(month, day, year));
+        System.out.println("You were born on a "+dayOfTheWeek(month, day, year)+".");
         System.out.println("You were born in " + monthString + ".");
         System.out.println(monthString + " has " + getNumberOfDays(month) + " days in it.");
+        getRhyme(dayOfTheWeek(month, day, year));
     }
 
     private static String dayOfTheWeek(int month, int day, int year) {
@@ -111,5 +112,32 @@ public class Main {
                 return 31;
         }
         return 0;
+    }
+    private static void getRhyme(String day) {
+        System.out.println("Your rhyme is:");
+
+        switch(day) {
+            case "Monday":
+                System.out.println("Child is of fair face.");
+                return;
+            case "Tuesday":
+                System.out.println("Child is full of grace.");
+                return;
+            case "Wednesday":
+                System.out.println("Child is full of woe.");
+                return;
+            case "Thursday":
+                System.out.println("Child has far to go.");
+                return;
+            case "Friday":
+                System.out.println("Child is loving and giving.");
+                return;
+            case "Saturday":
+                System.out.println("Child works hard for a living.");
+                return;
+            case "Sunday":
+                System.out.println("Child is fair and wise and good in every way.");
+                return;
+        }
     }
 }
