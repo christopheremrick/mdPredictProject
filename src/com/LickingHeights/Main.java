@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         //Make a loop at some point
-        Integer monthDays = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Type in your year of birth.");
         Integer year = scan.nextInt();
@@ -18,7 +17,7 @@ public class Main {
         Integer day = scan.nextInt();
         System.out.println(dayOfTheWeek(month, day, year));
         System.out.println("You were born in " + monthString + ".");
-        System.out.println(monthString + " has " + monthDays + " days in it.");
+        System.out.println(monthString + " has " + getNumberOfDays(month) + " days in it.");
     }
 
     private static String dayOfTheWeek(int month, int day, int year) {
@@ -83,5 +82,34 @@ public class Main {
         }
         return "Invalid month";
 
+    }
+    private static int getNumberOfDays(Integer month) {
+        switch(month) {
+            case 1:
+                return 31;
+            case 2:
+                return 28;
+            case 3:
+                return 31;
+            case 4:
+                return 30;
+            case 5:
+                return 31;
+            case 6:
+                return 30;
+            case 7:
+                return 31;
+            case 8:
+                return 31;
+            case 9:
+                return 30;
+            case 10:
+                return 31;
+            case 11:
+                return 30;
+            case 12:
+                return 31;
+        }
+        return 0;
     }
 }
