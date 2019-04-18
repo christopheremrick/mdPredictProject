@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String again = "y";
+        String again;
         do{
             //Make a loop at some point
             System.out.println("Welcome to the day of the week calculator.");
@@ -144,7 +144,6 @@ public class Main {
                 return;
             case "Sunday":
                 System.out.println("Child is fair and wise and good in every way.");
-                return;
         }
     }
 }
