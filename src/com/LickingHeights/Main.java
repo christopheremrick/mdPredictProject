@@ -8,6 +8,7 @@ public class Main {
         String again = "y";
         do{
             //Make a loop at some point
+            System.out.println("Welcome to the day of the week calculator.");
             Scanner scan = new Scanner(System.in);
             System.out.println("Type in your year of birth.");
             Integer year = scan.nextInt();
@@ -17,14 +18,14 @@ public class Main {
 
             System.out.println("Type the day of the month you were born on.");
             Integer day = scan.nextInt();
-            scan.next();
             System.out.println("You were born on a " + dayOfTheWeek(month, day, year) + ".");
             System.out.println("You were born in " + monthString + ".");
             System.out.println(monthString + " has " + getNumberOfDays(month) + " days in it.");
             getRhyme(dayOfTheWeek(month, day, year));
-            System.out.println("Type y if you want to try again and type n if you dont.");
+            System.out.println("Type y if you want to try again and type n if you don't.");
+            scan.nextLine();
             again = scan.nextLine();
-        } while(again.equals("y"))
+        } while(again.equals("y"));
     }
 
     private static String dayOfTheWeek(int month, int day, int year) {
