@@ -11,13 +11,13 @@ public class Main {
             System.out.println("Welcome to the day of the week calculator.");
             Scanner scan = new Scanner(System.in);
             System.out.println("Type in your year of birth.");
-            Integer year = scan.nextInt();
+            int year = scan.nextInt();
             System.out.println("Type your month of birth. (ex: 10 for October)");
-            Integer month = scan.nextInt();
+            int month = scan.nextInt();
             String monthString = getMonth(month);
 
             System.out.println("Type the day of the month you were born on.");
-            Integer day = scan.nextInt();
+            int day = scan.nextInt();
             System.out.println("You were born on a " + dayOfTheWeek(month, day, year) + ".");
             System.out.println("You were born in " + monthString + ".");
             System.out.println(monthString + " has " + getNumberOfDays(month) + " days in it.");
@@ -91,7 +91,7 @@ public class Main {
         return "Invalid month";
 
     }
-    private static int getNumberOfDays(Integer month) {
+    private static int getNumberOfDays(int month) {
         switch(month) {
             case 1:
                 return 31;
